@@ -5,74 +5,131 @@
 
 
     static $ram_list = array( 
-        0 => 12, 
-        1 => 8, 
-        2 => 6, 
-        3 => 4, 
-        4 => 3, 
-        5 => 2, 
-        6 => 1, 
-        7 => 0.3, 
+        12, 
+        8, 
+        6, 
+        4, 
+        3, 
+        2, 
+        1, 
+        0.3, 
     );
 
     static $rom_list = array( 
-        0 => 512, 
-        1 => 256, 
-        2 => 128, 
-        3 => 64, 
-        4 => 32, 
-        5 => 16,
-        6 => 8,
-        7 => 1,
+        512, 
+        256, 
+        128, 
+        64, 
+        32, 
+        16,
+        8,
+        1,
     );
 
     static $camera_list = array( 
-        0 => 40, 
-        1 => 25, 
-        2 => 12, 
-        3 => 8, 
-        4 => 2, 
-        5 => 0.3, 
-        6 => 'Без', 
+        40, 
+        25, 
+        12, 
+        8, 
+        2, 
+        0.03, 
+        'Без', 
     );
 
     static $battery_list = array( 
-        0 => 'До 2500 mAh', 
-        1 => 'От 2501 mAh До 3000 mAh', 
-        2 => 'От 3001 mAh До 3999 mAh', 
-        3 => 'Над 4000 mAh',  
+        'До 2500 mAh', 
+        'От 2501 mAh До 3000 mAh', 
+        'От 3001 mAh До 3999 mAh', 
+        'Над 4000 mAh',  
     );
 
     static $color_list = array( 
-        0 => 'Бял', 
-        1 => 'Черен', 
-        2 => 'Червен', 
-        3 => 'Син', 
-        4 => 'Златист', 
-        5 => 'Розов', 
-        6 => 'Сребрист', 
+        'Бял', 
+        'Черен', 
+        'Червен', 
+        'Син', 
+        'Златист', 
+        'Розов', 
+        'Сребрист', 
     );
 
     static $processor_list = array( 
-        0 => 8, 
-        1 => 6, 
-        2 => 4, 
-        3 => 2, 
+        8, 
+        6, 
+        4, 
+        2, 
     );
 
-    static $op_sys_list = array( 
-        0 => 'Android', 
-        1 => 'iOS', 
-        2 => 'Без операционна система'
+    static $opsys_list = array( 
+        'Android', 
+        'iOS', 
+        'Без операционна система'
     );
 
     static $man_list = array( 
-        0 => 'HUAWEI', 
-        1 => 'Xiomi', 
-        2 => 'Samsung', 
-        3 => 'Nokia', 
-        4 => 'Apple', 
-        5 => 'LG'
+        'HUAWEI', 
+        'Xiomi', 
+        'Samsung', 
+        'Nokia', 
+        'Apple', 
+        'LG'
+    );
+
+    static $display_list = array( 
+        'До 4 "', 
+        'От 4.6 " До 5 "', 
+        'От 5.1 " До 5.5 "', 
+        'От 5.6 " До 6 "', 
+        'Над 6.1 "',  
+    );
+
+    $all_list = array(
+        array(
+            'name' => 'Операционна система',
+            'input_name' => 'opsys',
+            'list' => $opsys_list,
+        ),
+        array(
+            'name' => 'Производител',
+            'input_name' => 'manufacturer',
+            'list' => $man_list,
+        ),
+        array(
+            'name' => 'Дисплей',
+            'input_name' => 'display',
+            'list' => $display_list,
+        ),
+        array(
+            'name' => 'Оперативна памет',
+            'input_name' => 'ram',
+            'list' => $ram_list,
+        ),
+        array(
+            'name' => 'Вградена памет',
+            'input_name' => 'rom',
+            'list' => $rom_list,
+        ),
+        array(
+            'name' => 'Камера',
+            'input_name' => 'camera',
+            'list' => $camera_list,
+        ),
+        array(
+            'name' => 'Батерия',
+            'input_name' => 'battery',
+            'list' => $battery_list,
+        ),
+        array(
+            'name' => 'Процесор',
+            'input_name' => 'processor',
+            'list' => $processor_list,
+        ),
+        array(
+            'name' => 'Цвят',
+            'input_name' => 'color',
+            'list' => $color_list,
+        )
+
     );
 
 ?>

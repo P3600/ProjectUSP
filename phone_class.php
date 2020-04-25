@@ -5,6 +5,7 @@ class Phone{
 
     private $name;
     private $price;
+    private $display;
     private $ram;
     private $rom;
     private $camera;
@@ -40,6 +41,17 @@ class Phone{
                 else{
                     $_SESSION["price"] = "Моля въведете валиднa цена!";
                     throw new Exception("No price found");
+                }
+                break;
+
+            case 'Display':
+                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) ) {
+                    $this->display = $val;
+                    $_SESSION["display"] = true;
+                }
+                else{
+                    $_SESSION["display"] = "Моля въведете валидно име!";
+                    throw new Exception("No display found");
                 }
                 break;
 
@@ -166,6 +178,10 @@ class Phone{
                 return $this->price ;
                 break;
                 
+            case 'Display':
+                return $this->display ;
+                break; 
+
             case 'Ram':
                 return $this->ram ;
                 break;
