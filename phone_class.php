@@ -34,7 +34,7 @@ class Phone{
 
             case 'Price':
                 
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && $val>0) {
+                if(!empty($val) && is_numeric($val) && $val>0) {
                     $this->price = $val;
                     $_SESSION["price"] = true;
                 }
@@ -45,7 +45,7 @@ class Phone{
                 break;
 
             case 'Display':
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) ) {
+                if(!empty($val) && is_numeric($val) ) {
                     $this->display = $val;
                     $_SESSION["display"] = true;
                 }
@@ -57,7 +57,7 @@ class Phone{
 
             case 'Ram':
                 global $ram_list;
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && array_key_exists($val,$ram_list)) {
+                if(!empty($val) && is_numeric($val) && array_key_exists($val,$ram_list)) {
                     $this->ram = $val;
                     $_SESSION["ram"] = true;
                 }
@@ -69,7 +69,7 @@ class Phone{
 
             case 'Rom':
                 global $rom_list;
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && array_key_exists($val,$rom_list)) {
+                if(!empty($val) && is_numeric($val) && array_key_exists($val,$rom_list)) {
                     $this->rom = $val;
                     $_SESSION["rom"] = true;
                 }
@@ -81,7 +81,7 @@ class Phone{
 
             case 'Battery':
                 
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && $val>=600) {
+                if(!empty($val) && is_numeric($val) && $val>=600) {
                     $this->battery = $val;
                     $_SESSION["battery"] = true;
                 }
@@ -92,7 +92,7 @@ class Phone{
                 break;
             case 'Processor':
                 global $processor_list;
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && array_key_exists($val,$processor_list)) {
+                if(!empty($val) && is_numeric($val) && array_key_exists($val,$processor_list)) {
                     $this->processor = $val;
                     $_SESSION["processor"] = true;
                 }
@@ -104,7 +104,7 @@ class Phone{
 
             case 'Color':
                 global $color_list;
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && array_key_exists($val,$color_list)) {
+                if(!empty($val) && is_numeric($val) && array_key_exists($val,$color_list)) {
                     $this->color = $val;
                     $_SESSION["color"] = true;
                 }
@@ -116,7 +116,7 @@ class Phone{
 
             case 'Manufacturer':
                 global $man_list;
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && && array_key_exists($val,$man_list)) {
+                if(!empty($val) && is_numeric($val) && && array_key_exists($val,$man_list)) {
                     $this->manufacturer = $val;
                     $_SESSION["manufacturer"] = true;
                 }
@@ -128,7 +128,7 @@ class Phone{
 
             case 'Camera':
                 global $camera_list;
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && array_key_exists($val,$camera_list)) {
+                if(!empty($val) && is_numeric($val) && array_key_exists($val,$camera_list)) {
                     $this->camera = $val;
                     $_SESSION["camera"] = true;
                 }
@@ -140,7 +140,7 @@ class Phone{
 
             case 'Op_sys':
                 global $op_sys_list;
-                if(!empty($val) && is_numeric($val) && preg_match('/^[0-9]*/', $val) && array_key_exists($val,$op_sys_list)) {
+                if(!empty($val) && is_numeric($val) && array_key_exists($val,$op_sys_list)) {
                     $this->op_sys = $val;
                     $_SESSION["op_sys"] = true;
                 }

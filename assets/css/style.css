@@ -57,3 +57,11 @@ body {
 .input_select label span{
   margin-left: 5px;
 }
+
+.input-group{
+  margin-bottom: 20px;
+}
+
+.input-group .form-control{
+  width: 100%;
+}

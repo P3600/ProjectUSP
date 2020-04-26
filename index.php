@@ -62,7 +62,7 @@
                             echo '
                                 <li>
                                     <label for="'.$all_value['input_name'].'_'.$list_key.'"> 
-                                      <input id="'.$all_value['input_name'].'_'.$list_key.'" name="'.$all_value['input_name'].'_'.$list_key.'" value="'.$list_key.'" type="checkbox">
+                                      <input id="'.$all_value['input_name'].'_'.$list_key.'" name="'.$all_value['input_name'].'[]" value="'.$list_key.'" type="checkbox">
                                       <span>'.$list_value.$extra_input_text.'</span>
                                     </label>
                                 </li>
