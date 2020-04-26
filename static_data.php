@@ -2,6 +2,8 @@
     static $gb_text =  ' GB';
     static $mpx_text =  ' MPx';
     static $proc_text =  '-ядрен';
+    static $inch_text =  '"';
+    static $mah_text =  'mAh';
 
 
     static $ram_list = array( 
@@ -68,7 +70,7 @@
 
     static $man_list = array( 
         'HUAWEI', 
-        'Xiomi', 
+        'Xiaomi', 
         'Samsung', 
         'Nokia', 
         'Apple', 

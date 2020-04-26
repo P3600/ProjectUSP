@@ -17,7 +17,7 @@ body {
 }
 
 #sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
+  padding: 0.575rem 1.25rem;
   font-size: 1.2rem;
 }
 
@@ -64,4 +64,22 @@ body {
 
 .input-group .form-control{
   width: 100%;
+}
+
+.phone_holder{
+  margin-bottom: 40px;
+}
+
+.phone_holder .phone_title{
+  font-size: 1.2rem;
+  height: 50px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.phone_holder .phone_price{
+  display: block;
+  font-size: 1rem;
+  color:#820000;
+  font-weight: bold;
 }

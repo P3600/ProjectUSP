@@ -1,5 +1,30 @@
 <?php
-    include 'static_data.php';
+    include 'phone_class.php';
+
+    if(isset($_POST) && !empty($_POST)){
+        try {
+            $e = new Phone();
+            $e->Name = $_POST['name'];
+            $e->Price = $_POST['price'];
+            $e->Display = $_POST['display'];
+            $e->Ram = $_POST['ram'];
+            $e->Rom = $_POST['rom'];
+            $e->Battery = $_POST['battery'];
+            $e->Processor = $_POST['processor'];
+            $e->Color = $_POST['color'];
+            $e->Manufacturer = $_POST['manufacturer'];
+            $e->Camera = $_POST['camera'];
+            $e->Opsys = $_POST['opsys'];
+            //$e->Img = $_POST['img'];
+            $msg = $e->AddPhone();
+        }
+
+        catch(Exception $e){
+            $error = $e->getMessage();
+        }
+
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -47,25 +72,58 @@
 
       <div class="container-fluid">
         <h1 class="text-center">Добавяне на телефон</h1>
+
+                <?php
+
+                    if(isset($error) && !empty($error)){
+                        echo '
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-6">
+                                    <div class="alert alert-danger" role="alert">
+                                      '.$error.'
+                                    </div>
+                                </div>
+                            </div>
+                        ';
+                    }
+
+                    if(isset($msg) && !empty($msg)){
+                        echo '
+                            <div class="row justify-content-md-center">
+                                <div class="col-md-6">
+                                    <div class="alert alert-success" role="alert">
+                                      '.$msg.'
+                                    </div>
+                                </div>
+                            </div>
+                        ';
+                    }
+                ?>
+
         <div class="row justify-content-md-center">
-            <form class="col-md-6">
+            <form class="col-md-6" method="post">
                 <div class="input-group">
                     <label>Име</label>
                     <input name="name" type="text" class="form-control" placeholder="Име" aria-label="Име" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group">
                     <label>Цена</label>
-                    <input name="price" type="number" class="form-control" placeholder="Цена" aria-label="Цена" aria-describedby="basic-addon1">
+                    <input name="price" type="text" class="form-control" placeholder="Цена" aria-label="Цена" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group">
                     <label>Дисплей</label>
-                    <input name="display" type="number" class="form-control" placeholder="Дисплей" aria-label="Дисплей" aria-describedby="basic-addon1">
+                    <input name="display" type="text" class="form-control" placeholder="Дисплей" aria-label="Дисплей" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                    <label>Батерия</label>
+                    <input name="battery" type="text" class="form-control" placeholder="Батерия" aria-label="Батерия" aria-describedby="basic-addon1">
                 </div>
                 <?php
                     foreach ($all_list as $all_key => $all_value) {
                         if($all_value['input_name'] == 'display' || $all_value['input_name'] == 'battery'){
                             continue;
                         }
+                        
                         echo '
                             <div class="input-group">
                                 <label>'.$all_value['name'].'</label>
