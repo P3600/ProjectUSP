@@ -116,7 +116,7 @@
 			}
 			if(in_array(3,$battery)){
 				$query .= "(phone.battery >= 4000) ";
-				if(count($battery)>1 && $battery[count($battery)-1] != 4){
+				if(count($battery)>1 && $battery[count($battery)-1] != 3){
 					$query .= "OR ";
 				}
 			}
